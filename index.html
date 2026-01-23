@@ -171,21 +171,7 @@ function googleTranslateElementInit() {
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<script>
-let gallery = document.getElementById("gallery");
-let savedImages = JSON.parse(localStorage.getItem("galleryImages")) || [];
 
-function renderGallery(){
-  gallery.innerHTML = "";
-  savedImages.forEach((img, index)=>{
-    let div = document.createElement("div");
-    div.innerHTML = `
-      <img src="${img}">
-      <button onclick="deletePhoto(${index})" style="margin-top:5px;background:#dc3545;">🗑 Delete</button>
-    `;
-    gallery.appendChild(div);
-  });
-}
 <section id="gallery">
   <h2>Our Tour Moments</h2>
 
