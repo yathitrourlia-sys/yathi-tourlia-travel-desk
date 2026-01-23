@@ -187,27 +187,6 @@ function renderGallery(){
   });
 }
 
-function addPhoto(){
-  let input = document.getElementById("photoInput");
-  if(input.files[0]){
-    let reader = new FileReader();
-    reader.onload = function(){
-      savedImages.push(reader.result);
-      localStorage.setItem("galleryImages", JSON.stringify(savedImages));
-      renderGallery();
-    }
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
-function deletePhoto(index){
-  savedImages.splice(index,1);
-  localStorage.setItem("galleryImages", JSON.stringify(savedImages));
-  renderGallery();
-}
-
-renderGallery();
-</script>
 
 </body>
   </htm
